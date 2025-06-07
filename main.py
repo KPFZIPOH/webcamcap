@@ -10,6 +10,10 @@ import os
 import logging
 import argparse
 
+
+# Suppress OpenCV warnings by setting log level to ERROR or higher
+cv2.setLogLevel(2)  # 2 corresponds to CV_LOG_LEVEL_ERROR (only errors are shown)
+
 # Configure logging to track operations and errors
 logging.basicConfig(
     filename='camera_capture.log',
